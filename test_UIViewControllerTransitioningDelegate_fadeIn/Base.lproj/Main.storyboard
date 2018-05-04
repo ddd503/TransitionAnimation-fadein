@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1th-KE-TcD">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--画面A-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="test_UIViewControllerTransitioningDelegate_fadeIn" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufg-D4-Kcv">
+                                <rect key="frame" x="37" y="133.5" width="300" height="400"/>
+                                <color key="backgroundColor" red="1" green="0.91924179719999999" blue="0.80123199119999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="画面遷移"/>
+                                <connections>
+                                    <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HIn-lG-oi7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.76438294861407685" green="0.98165785539976835" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ufg-D4-Kcv" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.6" id="3Fj-6W-xE8"/>
+                            <constraint firstItem="ufg-D4-Kcv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="J0c-j7-qUl"/>
+                            <constraint firstItem="ufg-D4-Kcv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hEX-3M-StG"/>
+                            <constraint firstItem="ufg-D4-Kcv" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="whe-VI-8fs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="画面A" id="xrk-Nr-zAK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400.80000000000001" y="31.934032983508249"/>
+        </scene>
+        <!--画面B-->
+        <scene sceneID="QY8-HK-SKD">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="Ysm-Qq-acf" customClass="SecondViewController" customModule="test_UIViewControllerTransitioningDelegate_fadeIn" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xLX-7Z-noL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Austraria" translatesAutoresizingMaskIntoConstraints="NO" id="Apl-h2-71p">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Apl-h2-71p" firstAttribute="centerX" secondItem="xLX-7Z-noL" secondAttribute="centerX" id="Nnj-J5-o6A"/>
+                            <constraint firstItem="Apl-h2-71p" firstAttribute="width" secondItem="xLX-7Z-noL" secondAttribute="width" id="UuI-gP-49d"/>
+                            <constraint firstItem="Apl-h2-71p" firstAttribute="centerY" secondItem="xLX-7Z-noL" secondAttribute="centerY" id="epv-eV-ySt"/>
+                            <constraint firstItem="Apl-h2-71p" firstAttribute="height" secondItem="xLX-7Z-noL" secondAttribute="height" id="mCD-1W-wLz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2cN-36-8qY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="画面B" id="pqc-3e-7Fu">
+                        <barButtonItem key="leftBarButtonItem" title="戻る" id="lE8-Fu-54g">
+                            <connections>
+                                <action selector="buttonAction:" destination="Ysm-Qq-acf" id="OcP-SD-CZ4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vDo-GU-whn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1244" y="31.934032983508249"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9Cy-hF-JGF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1th-KE-TcD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wGk-Fa-5Ev">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="uOa-Oz-giX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mg5-fG-yEw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-295" y="32"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Austraria" width="375" height="667"/>
+    </resources>
+</document>
